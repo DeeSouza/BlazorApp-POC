@@ -23,8 +23,8 @@ namespace BlazorApp.Server.Models
                 .Database(MsSqlConfiguration.MsSql2012
                 .ConnectionString(
                     @"
-                    Data Source=DATA_SOURCE_NAME;
-                    Initial Catalog=DATA_SOURCE_BASE;
+                    Data Source=GA-DE-NB-DV-22;
+                    Initial Catalog=Home;
                     Integrated Security=True").ShowSql()
                 )
                 .Mappings(m => m.FluentMappings.AddFromAssemblyOf<Users>())
