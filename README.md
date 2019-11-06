@@ -37,7 +37,7 @@ dotnet watch run [--urls]
 
 ### INSTALL DEPENDENCIES
 
-Open directory `GatecApp.Server` and execute the commands below:
+Open directory `BlazorApp.Server` and execute the commands below:
 
 ```sh
 dotnet add package NHibernate --version 5.2.6
@@ -47,5 +47,5 @@ dotnet add package System.Data.SqlClient --version 4.8.0-preview2.19523.17
 
 ### DATABASE
 
-Create the table `users` with fields than are in file `Users` in `GatecApp/Server/Models/Users`.  
-Configure credentials in file `NHIbernateHelpers.cs` in `GatecApp/Server/Models/`.
+Create the table `users` with fields than are in file `Users` in `BlazorApp/Server/Models/Users`.  
+Configure credentials in file `NHIbernateHelpers.cs` in `BlazorApp/Server/Models/`.
