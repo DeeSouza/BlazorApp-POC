@@ -12,10 +12,10 @@ using BlazorApp.Server.Models;
 namespace BlazorApp.Server.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
     public class UsersController : ControllerBase
     {
         [HttpGet]
+        [Route("api/[controller]")]
         public Array Get()
         {
             using (var session = NHibernateHelpers.OpenSession())
@@ -24,5 +24,16 @@ namespace BlazorApp.Server.Controllers
                 return users.ToArray();
             }
         }
-    }
+
+        [HttpGet]
+        [Route("api/[controller]/{id}")]
+        public Users Show(int id)
+        {
+            using (var session = NHibernateHelpers.OpenSession())
+            {
+                var user = session.Query<Users>().SingleOrDefault(i => i.Id == id);
+                return user;
+            }
+        }
+    }    
 }

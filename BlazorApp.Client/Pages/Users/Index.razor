@@ -1,4 +1,5 @@
 @page "/users"
+
 @using BlazorApp.Shared
 @inject HttpClient Http
 
@@ -27,7 +28,11 @@ else
             {
                 <tr>
                     <td>@user.Id</td>
-                    <td>@user.Nome</td>
+                    <td>
+                        <NavLink class="nav-link" href='@("users/"+user.Id)' Match="NavLinkMatch.All">
+                            @user.Nome
+                        </NavLink>
+                    </td>
                     <td>@user.Email</td>
                     <td>@user.Curso</td>
                     <td>@user.Sexo</td>
